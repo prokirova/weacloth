@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weacloth</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/648/648198.png">
+</head>
+<body>
+    <div>
+        <video playsinline="" autoplay="autoplay" loop="loop" muted="muted" preload="auto" poster="video/mvehfqz6w2ges2dj.jpg">
+            <source src="{{ url_for('static', filename='Sky And Cloud Background Video.mp4') }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+    </div>
+
+    <style>
+        form {
+            position:absolute;
+            width:306px;
+            height:250px;
+            left:calc(50% - 153px);
+            top:calc(50vh - 125px);
+
+            font-family: Georgia, serif;
+            font-size: 30px;
+            color: white;
+
+            }
+        .input {
+            margin: 0 auto;
+            display: block;
+            height: 20px;
+            width: 200px;
+
+        }
+        .submit {
+            margin: 0 auto;
+            display: block;
+            height: 35px;
+            width: 130px;
+            font-family: Verdana sans-serif;
+            background: white;
+            border-width: thin;
+            font-size: 18px;
+        }
+
+        video {
+            position: fixed;
+            min-width: 100%;
+            min-height: 100%;
+            right: 0;
+            bottom: 0;
+        }
+
+        h1 {
+            margin: 0 0 50px 0;
+            }
+
+        .submit:hover {
+            background: #F1F1F1;
+            }
+    </style>
+
+    <div class="content">
+        <form method="post" action="/clothes">
+            <h1> Введите ваш город </h1>
+            <input type="text" name="city" class="input">
+            <br><br>
+            <input type="submit" value="Я живу тут" name="ok" class="submit">
+        </form>
+    </div>
+
+</body>
+</html>
